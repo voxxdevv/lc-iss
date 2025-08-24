@@ -1,4 +1,4 @@
-# LumaCraft™ Design Language Roadmap
+# LumaCraft™ Website Design Language Roadmap
 
 **Document Version**: 2.0  
 **Last Updated**: August 2025
@@ -7,7 +7,7 @@
 
 ## Overview
 
-This design language roadmap is created to help developers, designers, and teams implement the LumaCraft™ visual identity and interaction patterns. The specifications, methodologies, and implementation guidelines provided here serve as a comprehensive reference for creating consistent, premium user experiences that align with LumaCraft™'s design philosophy.
+This website design language roadmap is created to help developers, designers, and teams implement the LumaCraft™ visual identity and interaction patterns. The specifications, methodologies, and implementation guidelines provided here serve as a comprehensive reference for creating consistent, premium user experiences that align with LumaCraft™'s design philosophy.
 
 ---
 
@@ -338,7 +338,7 @@ This design language roadmap is created to help developers, designers, and teams
 
 ## Summary
 
-This LumaCraft™ Design Language Roadmap represents a **premium, organic, and highly interactive** design methodology that combines sophisticated glass-morphism technology with dynamic, living interface elements. The system emphasizes **smooth luxury interactions** with **memorable brand differentiation** through the distinctive LumaCraft™ Lime/Pink dual-tone palette and advanced morphing animation technology.
+This LumaCraft™ Website Design Language Roadmap represents a **premium, organic, and highly interactive** design methodology that combines sophisticated glass-morphism technology with dynamic, living interface elements. The system emphasizes **smooth luxury interactions** with **memorable brand differentiation** through the distinctive LumaCraft™ Lime/Pink dual-tone palette and advanced morphing animation technology.
 
 **Key LumaCraft™ Differentiators**:
 - Morphing blob background system
