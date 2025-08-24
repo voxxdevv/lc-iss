@@ -141,7 +141,7 @@ This website design language roadmap is created to help developers, designers, a
 ### Dynamic Badge Architecture
 **Project Classification System**:
 - **Website Indicators**: LumaCraft™ Lime with border and hover illumination
-- **iOS Application Indicators**: LumaCraft™ Hot Pink with border and hover illumination
+- **iOS Shortcut Indicators**: LumaCraft™ Hot Pink with border and hover illumination
 - **Platform Badges**: Static LumaCraft™ Lime variants for consistency
 - **Miscellaneous Badges**: Static LumaCraft™ Hot Pink variants for categorization
 - **Interactive Enhancement**: Background opacity increases with shadow glow activation
