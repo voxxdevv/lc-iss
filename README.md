@@ -1,13 +1,13 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Document Version**: 1.1.0  
-**Last Updated**: August 24, 2025
+**Document Version**: 2.0.0  
+**Last Updated**: August 24, 2025  
 
 -----
 
 ## Overview
 
-This website design language roadmap is created to help developers, designers, and teams implement the LumaCraft™ visual identity and interaction patterns. The specifications, methodologies, and implementation guidelines provided here serve as a comprehensive reference for creating consistent, premium user experiences that align with LumaCraft™’s design philosophy.
+This website design language roadmap consolidates the actual implementation patterns discovered across four live LumaCraft™ websites, providing developers and designers with precise specifications for creating consistent, premium user experiences that align with the evolved LumaCraft™ design philosophy.
 
 -----
 
@@ -15,43 +15,82 @@ This website design language roadmap is created to help developers, designers, a
 
 ### Color System Specifications
 
-**Primary Brand Palette**
+**Primary Brand Palette** (Consistent Across All Sites)
 
-- **Background Foundation**: `#1a1a1a` (deep charcoal) transitioning to `#131313` (ultra-dark base)
-- **Text Hierarchy**: `#f9f9f9` (primary content) to `#e0e0e0` (secondary content)
-- **Muted Content**: `#c0c0c0` (tertiary elements) with 80% opacity modulation
-- **Glass Foundation**: `rgba(30, 33, 43, 0.6)` with enhanced backdrop filtering technology
+- **Background Foundation**: `#1a1a1a` (primary dark), `#131313` (ultra-dark base), `#121419` (specialized backgrounds)
+- **Text Hierarchy**: `#f9f9f9` / `rgba(240, 240, 245, 1)` (primary content) to `#e0e0e0` / `rgba(200, 200, 210, 0.8)` (secondary content)
+- **Muted Content**: `#c0c0c0` (tertiary elements) with opacity modulation
 
-**Extended Accent Color Portfolio**
+**LumaCraft™ Signature Brand Colors**
 
-- **System Blue**: `#0a84ff` with 15% opacity derivatives for interface elements
-- **Success Green**: `#30d158` for positive state indicators
-- **Warning Orange**: `#ff9f0a` for cautionary interface feedback
-- **Error Red**: `#ff453a` for critical system alerts
-- **LumaCraft™ Lime**: `#32CD32` (primary brand identifier) - **Signature brand color**
-- **LumaCraft™ Hot Pink**: `#FF69B4` (secondary brand accent) - **Signature brand color**
+- **LumaCraft™ Lime**: `#32CD32` (primary brand identifier)
+- **LumaCraft™ Hot Pink**: `#FF69B4` (secondary brand accent)
+- **Corresponding Glow Effects**: `rgba(50, 205, 50, 0.4)` and `rgba(255, 105, 180, 0.4)`
 
-**Glow Technology**
+**Extended Functional Color Portfolio**
 
-- **Lime Luminescence**: `rgba(50, 205, 50, 0.4)` for premium brand recognition
-- **Pink Luminescence**: `rgba(255, 105, 180, 0.4)` for secondary brand emphasis
+- **System Blue**: `rgba(10, 132, 255, 1)` with 15% opacity derivatives
+- **Accent Red**: `rgba(255, 69, 58, 1)` for specialized applications
+- **Success Green**: `#30d158` / `rgba(48, 209, 88, 1)` for positive states
+- **Warning Orange**: `rgba(255, 159, 10, 1)` for cautionary feedback
+- **Error States**: `#ff6b6b` for critical alerts
+
+**Glass-Morphism Foundation Colors**
+
+- **Primary Glass Background**: `rgba(30, 33, 43, 0.6)` with hover state `rgba(30, 33, 43, 0.8)`
+- **Input Background**: `rgba(40, 44, 52, 0.8)` for form elements
+- **Container Variants**: `#252525`, `#232323`, `#2a2a2a` for different component types
 
 ### Typography Architecture
 
-**Typeface**: Montserrat (Google Fonts Integration)
+**Typeface**: Montserrat (Google Fonts Integration) - Universal across all properties
 
-- **Weight Range**: Complete 100-900 spectrum available for granular control
-- **Content Hierarchy System**:
-  - Hero Display: 3rem, weight 900 (maximum impact)
-  - Section Headers: 2.5rem, weight 700 (structural emphasis)
-  - Component Headers: 1.5rem, weight 600 (module identification)
-  - Body Content: 1-1.2rem, weight 400 (readable content)
-  - Interface Labels: 0.75rem, weight 700, uppercase transformation
-- **Enhanced Depth**: `0 5px 20px rgba(0, 0, 0, 0.15)` text shadow for premium visual depth
+**Font Weight System**:
 
-### Spacing Methodology
+- **Ultra Bold Headers**: weight 900 for maximum impact displays
+- **Bold Headers**: weight 700 for section titles and important headers
+- **Semi-Bold**: weight 600 for component headers and buttons
+- **Medium**: weight 500 for emphasized content
+- **Regular**: weight 400 for standard body text
+- **Light Variants**: weights 300-100 available for specialized use
 
-**CSS Custom Properties Implementation**:
+**Typography Scale Implementation**:
+
+```css
+/* Hero Display */
+.hero h1 { font-size: 3rem; font-weight: 900; }
+
+/* Section Headers */
+.section-title { font-size: 2.5rem; font-weight: 700; }
+
+/* Primary Headers */
+h1 { font-size: 2.5rem; font-weight: 700; }
+
+/* Component Headers */
+h3, .service-card h3 { font-size: 1.5rem; font-weight: 600; }
+
+/* Standard Headers */
+h2 { font-size: 1.1rem; font-weight: 500; }
+
+/* Body Text */
+p, body { font-size: 1rem; line-height: 1.5-1.6; }
+
+/* Interface Labels */
+label { font-size: 0.9rem; font-weight: 400; }
+
+/* Small Text */
+.footer-text { font-size: 1rem; }
+```
+
+**Enhanced Text Effects**:
+
+- **Text Shadow**: `0 5px 20px rgba(0, 0, 0, 0.15)` for depth
+- **Gradient Text**: Linear gradients for brand elements
+- **Drop Shadow**: `drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))` for logos
+
+### Advanced Spacing System
+
+**CSS Custom Properties** (Standardized across implementations):
 
 ```css
 :root {
@@ -67,225 +106,336 @@ This website design language roadmap is created to help developers, designers, a
 
 ## Visual Identity Architecture
 
-### Morphing Blob System
+### Morphing Blob System (Signature LumaCraft™ Technology)
 
-**Revolutionary Interface Technology**:
+**Advanced Implementation Specifications**:
 
-- **Organic Shape Generation**: Complex border-radius animations creating fluid, living interfaces
-- **Dual-Blob Configuration**: Primary element (LumaCraft™ Hot Pink) + Secondary element (LumaCraft™ Lime)
-- **Advanced Morphing Algorithms**: 15-25 second animation cycles utilizing cubic-bezier precision timing
-- **Multi-Axis Motion System**: Coordinated translation, rotation, and scale transformations
-- **Ultra-Blur Technology**: 80px blur radius with 0.3 opacity for ethereal background effects
+```css
+.blob-1 {
+  width: 80vw; height: 80vw;
+  max-width: 1200px; max-height: 1200px;
+  min-width: 600px; min-height: 600px;
+  background: var(--hot-pink);
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: morphBlob1 15s ease-in-out infinite alternate, 
+             floatBlob 20s ease-in-out infinite;
+}
 
-### Glass-Morphism Design Framework
+.blob-2 {
+  width: 75vw; height: 75vw;
+  max-width: 1100px; max-height: 1100px;
+  min-width: 550px; min-height: 550px;
+  background: var(--lime);
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: morphBlob2 18s ease-in-out infinite alternate, 
+             floatBlob 25s ease-in-out infinite reverse;
+}
+```
 
-**Core Technical Specifications**:
+**Morphing Animation Technology**:
 
-- **Advanced Backdrop Filtering**: 20-32px blur with enhanced saturation multipliers (2.5x-5x)
-- **Sophisticated Transparency**: 60-80% opacity foundations with gradient overlay systems
-- **Border Treatment Protocol**: 1px solid white at 10% opacity for subtle definition
-- **Enhanced Shadow Architecture**: Multi-level depth system with colored glow integration
-- **Gradient Overlay Technology**: Subtle LumaCraft™ brand gradients at 3-5% opacity
+- **Complex Border-Radius Transitions**: From `40% 60% 70% 30% / 40% 50% 60% 50%` through multiple organic variations
+- **Coordinated Transform System**: Translation, rotation, and scale changes
+- **Dual-Blob Configuration**: LumaCraft™ Hot Pink primary, Lime secondary
+- **Ultra-Blur Effects**: 80px blur radius for ethereal backgrounds
+
+### Glass-Morphism Framework
+
+**Core Technical Implementation**:
+
+```css
+.glass-card {
+  background: rgba(30, 33, 43, 0.6);
+  backdrop-filter: saturate(180%) blur(32px);
+  -webkit-backdrop-filter: saturate(180%) blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+```
+
+**Backdrop Filter Specifications**:
+
+- **Saturation Enhancement**: 180-320% saturation multipliers
+- **Blur Technology**: 20-32px blur with enhanced clarity
+- **Border Treatment**: 1px solid white at 10% opacity
+- **Shadow Integration**: Multi-level depth with colored glow effects
 
 ### Border Radius Standards
 
-- **Micro Elements**: 20px (badges, input fields)
-- **Standard Components**: 30px (cards, primary interface elements)
-- **Hero Elements**: 30px+ (major layout sections)
-- **Circular Elements**: 50% (buttons, avatar components)
+**Comprehensive Radius System**:
 
-### Shadow Elevation System
-
-- **Level 1**: `0 2px 8px rgba(0,0,0,0.2)` - Subtle element separation
-- **Level 2**: `0 8px 30px rgba(0,0,0,0.3)` - Standard component elevation
-- **Level 3**: `0 16px 50px rgba(0,0,0,0.4)` - Premium element emphasis
-- **Enhanced Glow Effects**: Colored shadows utilizing LumaCraft™ brand accents
+- **Micro Elements**: 12-15px (badges, small inputs)
+- **Standard Components**: 20-30px (cards, primary interface elements)
+- **Large Components**: 30px+ (major containers, hero sections)
+- **Form Elements**: 20-30px (inputs, buttons)
+- **Circular Elements**: 50% (avatar buttons, icon containers)
 
 -----
 
 ## Advanced Animation Framework
 
-### Hardware Acceleration Standards
+### Hardware-Accelerated Animation Standards
 
-**GPU Optimization Protocols**:
+**Performance Optimization Protocols**:
 
-- **3D Transform Triggers**: `translateZ(0)` and `translate3d()` implementation for forced GPU layer creation
-- **Transform-Based Animations**: Prioritization of transform and opacity changes over layout-affecting properties
-- **Will-Change Management**: Strategic `will-change` property implementation with automatic cleanup protocols
-- **Backface Visibility**: `backface-visibility: hidden` for enhanced rendering performance
-- **3D Rendering Context**: `transformStyle: preserve-3d` and `perspective` implementation for optimized animations
+```css
+.hardware-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 
-### Timing Functions
+/* Staggered Entry Animation */
+.staggered-item {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.1s + 0.2s);
+}
+```
 
-- **Premium Smoothing**: `cubic-bezier(0.175, 0.885, 0.32, 1.275)` for luxury interaction feel
-- **Standard Transitions**: 1s duration for sophisticated, deliberate pacing
-- **Micro-Feedback**: 0.3s for immediate user response validation
-- **Ambient Morphing**: 15-25s cycles for continuous background animation
+**Signature Timing Functions**:
 
-### Signature Animation Patterns
+- **Premium Smoothing**: `cubic-bezier(0.175, 0.885, 0.32, 1.275)` for luxury feel
+- **Bounce Effect**: `cubic-bezier(0.22, 1, 0.36, 1)` for card animations
+- **Standard Easing**: `cubic-bezier(0.34, 1.56, 0.64, 1)` for hover effects
+- **Quick Response**: `cubic-bezier(0.4, 0, 0.2, 1)` for immediate feedback
+
+### Enhanced Animation Patterns
 
 **Entry Animation Choreography**:
 
-- **Staggered Emergence**: 0.1s incremental delays using `calc(var(--index) * 0.1s)` methodology
-- **Combined Transform Animation**: Synchronized opacity and transform property changes
-- **Living Background System**: Continuous organic shape transformation for dynamic interfaces
+```css
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardDrop {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+```
 
 **Interactive Response Behaviors**:
 
-- **Hardware-Accelerated Elevation**: `translate3d(0, -10px, 0) scale(1.02)` with coordinated shadow enhancement
-- **Brand-Coded Illumination**: LumaCraft™ Lime/Pink shadow enhancement on user interaction
-- **Progressive Underline System**: Width-expanding underlines with rounded termination
-- **Intelligent Margin Compensation**: Dynamic spacing adjustment for growing interface elements
+- **Elevation Response**: `translateY(-10px) scale(1.02)` for cards
+- **Enhanced Elevation**: `translateY(-4px) scale(1.03)` for buttons
+- **Micro-Feedback**: `translateY(-2px)` for links and small elements
 
-**Particle Technology**:
+### Background Animation Systems
 
-- **Custom Star Geometry**: Clip-path polygon shapes for unique visual identity
-- **Dual-Brand Particle System**: LumaCraft™ Lime and Pink variants with matching luminescence
-- **Advanced Float Mechanics**: 15s infinite linear progression with opacity state management
-- **Dynamic Positioning**: CSS custom property integration for randomized placement
-- **GPU-Optimized Rendering**: 3D transforms and hardware acceleration for smooth particle movement
+**Complex Background Patterns**:
 
-### Premium Micro-Interaction System
-
-**Dynamic Header Response**:
-
-- **Hardware-Accelerated Header Movement**: `translate3d()` based positioning for smooth hide/show transitions
-- **Adaptive Backdrop Technology**: Saturation progression from 2.5x to 5x on scroll interaction
-- **Animated Brand Border**: LumaCraft™ Lime/Pink gradient with scroll-triggered dissolution
-- **Responsive Logo Scaling**: Subtle scale reduction (0.9x) with premium smooth transitions
-- **Intelligent Padding Adaptation**: Context-aware spacing modifications
-
-**Enhanced Performance Protocols**:
-
-- **RequestAnimationFrame Integration**: Frame-synchronized scroll event handling
-- **Passive Event Listeners**: Non-blocking scroll event processing
-- **Intersection Observer Implementation**: Efficient visibility detection for animation triggers
-- **Memory Management**: Automatic cleanup of inactive `willChange` properties every 30 seconds
+```css
+body {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 15px),
+    linear-gradient(145deg, var(--bg-primary) 0%, #121419 30%, #1e212b 80%, #121419 100%);
+  background-size: 400% 400%;
+  animation: bgMove 30s ease-in-out infinite;
+}
+```
 
 -----
 
 ## Component Architecture Standards
 
-### Button System Specifications
+### Button System Implementation
 
 **Primary Action Elements**:
 
-- Background Technology: Linear gradients utilizing LumaCraft™ accent colors
-- Hardware-Accelerated Hover Response: Enhanced elevation with subtle scale transformation using `translate3d()`
-- Active State: Compressed scale (0.98x) for tactile feedback
-- Focus Management: 2px LumaCraft™ accent-colored outline for accessibility
+```css
+.analyze-btn, .generate-btn {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, rgba(76, 157, 255, 1) 100%);
+  padding: 0.75rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.4);
+}
+
+.analyze-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(10, 132, 255, 0.4);
+}
+```
 
 **Secondary Action Elements**:
 
-- Glass morphism foundation with border definition
-- Hover Enhancement: Increased backdrop blur for depth perception
-- Icon Integration: Full support for icon + text combinations
+- **Circular Icon Buttons**: 50px circular buttons for specific actions
+- **Warning/Danger States**: Specialized color schemes with hover elevation
+- **Glass-Style Buttons**: Backdrop filter implementation with border definition
 
 ### Dynamic Badge Architecture
 
-**Project Classification System**:
+**Badge Classification System**:
 
-- **Website Indicators**: LumaCraft™ Lime with border and hover illumination
-- **iOS Shortcut Indicators**: LumaCraft™ Hot Pink with border and hover illumination
-- **Platform Badges**: Static LumaCraft™ Lime variants for consistency
-- **Miscellaneous Badges**: Static LumaCraft™ Hot Pink variants for categorization
-- **Hardware-Accelerated Enhancement**: Background opacity increases with shadow glow activation using GPU layers
+```css
+.badge-website {
+  background-color: rgba(50, 205, 50, 0.2);
+  color: var(--lime);
+  border: 1px solid var(--lime);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-ios {
+  background-color: rgba(255, 105, 180, 0.2);
+  color: var(--hot-pink);
+  border: 1px solid var(--hot-pink);
+}
+```
 
 ### Advanced Card Framework
 
 **Service Card Technology**:
 
-- **Glass Morphism Foundation**: `rgba(255, 255, 255, 0.05)` with subtle gradient overlays
-- **Premium Hover States**: Hardware-accelerated 10px elevation with 2% scale and LumaCraft™ colored shadows
-- **Alternating Accent System**: LumaCraft™ Lime primary with Hot Pink alternating patterns
-- **Progressive Underline Animation**: Expanding width with hover-triggered margin compensation
-- **Orchestrated Entry**: Index-based animation delay coordination with GPU optimization
+```css
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 30px;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.1s + 0.2s);
+}
 
-### Sophisticated Input Architecture
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(50, 205, 50, 0.3);
+  box-shadow: 0 15px 35px rgba(50, 205, 50, 0.15);
+}
+```
 
-**Form Element Technology**:
+### Input System Architecture
 
-- Glass background implementation (`rgba(40,44,52,0.8)`)
-- Focus State Protocol: LumaCraft™ accent border with shadow glow activation
-- Hardware-Accelerated Response: Interactive `translate3d(0, -1px, 0)` for premium feel
+**Form Element Implementation**:
 
-**Advanced Input System**:
+```css
+input[type="text"], textarea {
+  background: rgba(40, 44, 52, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: saturate(180%) blur(12px);
+}
 
-- **Dual-Color Theming**: LumaCraft™ Lime border with Hot Pink focus state transition
-- **Controlled Glow Effects**: Reduced intensity illumination for sophisticated aesthetics
-- **Precision Transitions**: 0.3s easing for all state change management
-- **Enhanced Contrast Protocol**: Background darkening on focus for improved usability
-
-### Navigation & Layout Framework
-
-**Fixed Header Technology**:
-
-- **Hardware-Accelerated Header Movement**: `translate3d()` based positioning system
-- **Dynamic Backdrop Saturation**: Adaptive blur enhancement system
-- **Brand Gradient Backgrounds**: Horizontal LumaCraft™ Lime/Hot Pink gradient implementation
-- **Z-Index Management**: Ultra-high priority layering (1000000) for overlay control
-- **Global Smooth Scrolling**: Comprehensive smooth scroll behavior implementation
-
-**Container Architecture**:
-
-- Maximum width constraint: 720px for optimal readability
-- Center alignment with automatic margin distribution
-- Responsive padding adjustment protocols
+input:focus, textarea:focus {
+  border-color: var(--accent-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+```
 
 -----
 
 ## Interactive State Management
 
-### Highlight System
+### Highlight System Implementation
 
 **Text Emphasis Technology**:
 
-- **LumaCraft™ Lime Highlights**: Skewed background overlays with Hot Pink underlay contrast
-- **LumaCraft™ Hot Pink Highlights**: Reverse color scheme with Lime underlay system
-- **Hardware-Accelerated Hover Transformation**: Color inversion with enhanced skew and elevation effects
-- **Dynamic Height Modulation**: 10px to 15px background expansion on interaction
+```css
+.highlight {
+  color: var(--lime);
+  position: relative;
+  transition: all 1s ease;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 105, 180, 0.2);
+  bottom: 5px;
+  left: 0;
+  transform: skewX(-15deg);
+  transition: all 1s ease;
+}
+
+.highlight:hover::after {
+  height: 15px;
+  background: var(--pink-glow);
+  transform: skewX(-25deg) translateY(-2px);
+}
+```
 
 ### Advanced Link Animation Architecture
 
-**Footer Link Technology**:
+**Progressive Underline System**:
 
-- **Center-Expanding Underlines**: Initiation from 50% position for balanced growth
-- **Staggered Entry Choreography**: Index-based animation delay coordination
-- **Hardware-Accelerated Hover Response**: Color transformation + vertical elevation (`translate3d(0, -2px, 0)`)
-- **Intelligent Margin Compensation**: Smart spacing adjustment for underline expansion accommodation
+```css
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--hot-pink);
+  border-radius: 1px;
+  transition: width 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-### Micro-Interaction Protocols
+.footer-links a:hover::after {
+  width: 100%;
+}
+```
 
-- **Copy Action Feedback**: Success pulse animation for user confirmation
-- **Button Response**: Hardware-accelerated scale compression feedback for tactile interface feel
-- **Hover Preview System**: Progressive enhancement for improved user experience
-- **Focus Management**: Clear visual hierarchy for accessibility compliance
-
-### Advanced Feedback Architecture
+### State Feedback Systems
 
 **Success State Indicators**:
 
-- LumaCraft™ Success Green (`#30d158`) for positive confirmation
-- Hardware-accelerated pulse animation for attention direction
-- Icon transformation for visual feedback enhancement
+```css
+.copy-btn.copied {
+  color: #4ade80;
+  border-color: #4ade80;
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+```
 
 **Error State Management**:
 
-- LumaCraft™ Error Red (`#ff453a`) for critical alerts
-- GPU-optimized shake animation for immediate attention capture
-- Background tinting (10% opacity) for context emphasis
+```css
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  animation: shake 0.5s ease-in-out, fadeInDown 0.5s ease-out;
+}
 
-**Warning State Protocol**:
-
-- LumaCraft™ Warning Orange (`#ff9f0a`) for cautionary messaging
-- Hardware-accelerated pulse animation for measured attention
-- Background tinting for subtle context indication
-
-**Advanced Loading States**:
-
-- **Organic Morphing**: Hardware-accelerated background blob animations during processing periods
-- **Particle Emergence**: GPU-optimized dynamic particle generation for engagement
-- **Gradient Shift Technology**: Background color transitions for status indication
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+```
 
 -----
 
@@ -293,184 +443,86 @@ This website design language roadmap is created to help developers, designers, a
 
 ### Breakpoint Architecture
 
-- **Mobile Optimization**: < 768px (90% font scaling, reduced blob sizing, optimized particle count)
-- **Tablet Adaptation**: 768px - 1024px (intermediate scaling, balanced performance)
-- **Desktop Excellence**: > 1024px (full feature implementation, maximum particle density)
-
-### Adaptive Element Protocols
-
-- Font scaling via `html { font-size }` methodology for consistent proportions
-- Flexible container width management for content optimization
-- Touch-friendly sizing protocols for mobile interface elements
-- Grid system adaptation utilizing auto-fill minmax for responsive layouts
-- **Performance Scaling**: Reduced animation complexity on mobile devices for battery optimization
-
------
-
-## Performance & Technical Implementation
-
-### Advanced CSS Architecture
-
-**CSS Custom Properties Integration**:
-
-- **Dynamic Index Variables**: `--card-index`, `--link-index` for staggered animation coordination
-- **Centralized Color Management**: LumaCraft™ brand color theming system
-- **Animation Synchronization**: Coordinated timing across all interface components
-
-### GPU Optimization Protocols
-
-**Hardware Acceleration Standards**:
-
-- **Strategic Will-Change Implementation**: Performance-critical elements flagged for GPU layer creation
-- **Transform-Based Animation Prioritization**: Exclusive use of transform and opacity changes for smooth performance
-- **3D Transform Context**: `translateZ(0)`, `translate3d()`, and `backfaceVisibility: hidden` implementation
-- **Blob Animation Optimization**: GPU-accelerated continuous rendering with intersection observer controls
-- **Backdrop-Filter Enhancement**: Hardware-accelerated backdrop effects with comprehensive fallback strategies
-- **Memory Management System**: Automatic cleanup of inactive `willChange` properties every 30 seconds
-
-**Performance Monitoring & Optimization**:
-
-- **Intersection Observer Integration**: Efficient visibility-based animation control
-- **RequestAnimationFrame Synchronization**: Frame-perfect scroll event handling
-- **Passive Event Listeners**: Non-blocking user interaction processing
-- **Particle System Optimization**: Dynamic particle count adjustment based on device capabilities
-- **3D Rendering Context**: `perspective` and `transformStyle: preserve-3d` for enhanced depth perception
-
-### Advanced JavaScript Performance Architecture
-
-```javascript
-// Hardware Acceleration Implementation Example
-function enableHardwareAcceleration(element) {
-    element.style.transform = 'translateZ(0)';
-    element.style.willChange = 'transform, opacity';
-    element.style.backfaceVisibility = 'hidden';
+```css
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  html { font-size: 90%; }
+  .blob-1, .blob-2 { width: 350px; height: 350px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
 
-// Memory Management Protocol
-function cleanupWillChange() {
-    document.querySelectorAll('[style*="will-change"]').forEach(el => {
-        const computedStyle = window.getComputedStyle(el);
-        if (computedStyle.animationPlayState === 'paused' || 
-            computedStyle.animationName === 'none') {
-            el.style.willChange = 'auto';
-        }
-    });
+/* Enhanced Coverage for Large Screens */
+@media screen and (min-width: 1200px) {
+  .blob-1 { width: 90vw; height: 90vw; }
+  .blob-2 { width: 85vw; height: 85vw; }
 }
 
-// Optimized Scroll Handler
-let ticking = false;
-function onScroll() {
-    if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(updateScrollEffects);
-    }
-}
-
-// Header Hardware Acceleration
-function updateHeaderPosition(state) {
-    const header = document.getElementById('navbar');
-    if (state === 'hidden') {
-        header.style.transform = 'translate3d(0, -100%, 0)';
-    } else {
-        header.style.transform = 'translate3d(0, 0, 0)';
-    }
+@media screen and (min-width: 1600px) {
+  .blob-1 { width: 100vw; height: 100vw; }
+  .blob-2 { width: 95vw; height: 95vw; }
 }
 ```
 
-### Accessibility & Compliance
-
-- Focus-visible outline implementation with sufficient contrast ratios
-- Global smooth scroll behavior for improved user experience
-- Text size adjustment prevention for consistent visual presentation
-- High DPI display optimization for crisp visual rendering
-- **Motion Preference Management**: `@media (prefers-reduced-motion: no-preference)` gating for performance-intensive animations
-- **Reduced Motion Alternatives**: Simplified animation states for users with motion sensitivity
-
-### Browser Support Matrix
-
-- Modern evergreen browser optimization with hardware acceleration support
-- Webkit-specific prefix implementation for backdrop-filter technology
-- Graceful degradation protocols for unsupported feature sets
-- GPU capability detection for adaptive performance scaling
-
------
-
-## Brand Identity Integration
-
-### LumaCraft™ Signature Visual Language
-
-**Dual-Tone Brand Architecture**:
-
-- **Primary Brand Color**: LumaCraft™ Lime (#32CD32) - Representing energy, growth, and innovation
-- **Secondary Brand Color**: LumaCraft™ Hot Pink (#FF69B4) - Representing creativity, boldness, and market differentiation
-- **Foundation Color**: Ultra-dark (#131313) - Representing premium quality, sophistication, and focused user experience
-
-### Morphing Organic Design Philosophy
-
-**Living Interface Methodology**:
-
-- Hardware-accelerated continuous shape transformation suggesting organizational growth and adaptability
-- GPU-optimized particle system integration creating sense of energy and forward momentum
-- Glass-morphism providing premium, contemporary aesthetic appeal with enhanced backdrop filtering
-- Dual-color scheme creating memorable brand differentiation in competitive markets
-
------
-
-## Implementation Guidelines
-
-### CSS Architecture Pattern
+### High DPI Display Optimization
 
 ```css
-/* LumaCraft™ Core Variables */
-:root {
-  --lumacraft-lime: #32CD32;
-  --lumacraft-hot-pink: #FF69B4;
-  --lumacraft-dark: #131313;
-  --lumacraft-light: #f9f9f9;
-  --lumacraft-lime-glow: rgba(50, 205, 50, 0.4);
-  --lumacraft-hot-pink-glow: rgba(255, 105, 180, 0.4);
-  --lumacraft-success-green: #30d158;
-  --lumacraft-error-red: #ff453a;
-  --lumacraft-warning-orange: #ff9f0a;
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo, .logo-header img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
+```
 
-/* Premium Transition Standard with Hardware Acceleration */
-.lumacraft-premium-transition {
-  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: translateZ(0);
+-----
+
+## Accessibility & Motion Preferences
+
+### Comprehensive Motion Reduction Support
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  
+  *, *::before, *::after {
+    animation: none !important;
+    animation-duration: 0s !important;
+    transition: none !important;
+    will-change: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+```
+
+### Enhanced Focus Management
+
+```css
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+```
+
+-----
+
+## Performance Optimization Standards
+
+### Hardware Acceleration Implementation
+
+```css
+/* Universal Performance Base */
+.performance-optimized {
   will-change: transform, opacity;
-  backface-visibility: hidden;
-}
-
-/* Staggered Animation Pattern with GPU Optimization */
-.lumacraft-staggered-item {
-  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: calc(var(--item-index, 0) * 0.1s + 0.2s);
-  transform: translate3d(0, 0, 0);
-  will-change: transform, opacity;
-}
-
-/* Hardware Acceleration Base Class */
-.lumacraft-gpu-accelerated {
   transform: translateZ(0);
-  will-change: transform;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
 
-/* Particle System Optimization */
-.lumacraft-particle {
-  transform: translate3d(0, 0, 0);
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-```
-
-### Animation Keyframe Library with Hardware Acceleration
-
-```css
-@keyframes fadeInUp {
+/* Animation Cleanup */
+@keyframes optimizedFadeIn {
   from {
     opacity: 0;
     transform: translate3d(0, 30px, 0);
@@ -480,131 +532,88 @@ function updateHeaderPosition(state) {
     transform: translate3d(0, 0, 0);
   }
 }
-
-@keyframes lumacraftMorphBlob {
-  0% { 
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  25% { 
-    border-radius: 50% 50% 40% 60% / 60% 40% 50% 40%;
-    transform: translate3d(10px, -5px, 0) rotate(90deg);
-  }
-  50% { 
-    border-radius: 30% 70% 70% 30% / 50% 60% 30% 60%;
-    transform: translate3d(-5px, 10px, 0) rotate(180deg);
-  }
-  75% { 
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transform: translate3d(-10px, -5px, 0) rotate(270deg);
-  }
-  100% { 
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    transform: translate3d(0, 0, 0) rotate(360deg);
-  }
-}
-
-@keyframes lumacraftParticleFloat {
-  0% {
-    transform: translate3d(var(--x-start, 0), var(--y-start, 0), 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(var(--x-move, 0), var(--y-move, 0), 0);
-    opacity: 0;
-  }
-}
 ```
 
-### JavaScript Hardware Acceleration Utilities
+### Memory Management Protocols
 
-```javascript
-// LumaCraft™ Hardware Acceleration Utility Library
-class LumaCraftGPU {
-  static enableAcceleration(element) {
-    element.style.transform = 'translateZ(0)';
-    element.style.willChange = 'transform, opacity';
-    element.style.backfaceVisibility = 'hidden';
-    element.style.transformStyle = 'preserve-3d';
-  }
+- **Automatic `will-change` cleanup**: Remove after animations complete
+- **Intersection Observer integration**: Efficient visibility-based animations
+- **RequestAnimationFrame synchronization**: Frame-perfect scroll handling
+- **Passive event listeners**: Non-blocking interaction processing
+
+-----
+
+## Implementation Guidelines
+
+### CSS Architecture Pattern
+
+```css
+/* LumaCraft™ Core Variable System */
+:root {
+  /* Brand Colors */
+  --lime: #32CD32;
+  --hot-pink: #FF69B4;
+  --dark: #131313;
+  --light: #f9f9f9;
+  --lime-glow: rgba(50, 205, 50, 0.4);
+  --pink-glow: rgba(255, 105, 180, 0.4);
   
-  static cleanupAcceleration(element) {
-    element.style.willChange = 'auto';
-  }
+  /* Glass System */
+  --bg-glass: rgba(30, 33, 43, 0.6);
+  --bg-glass-hover: rgba(30, 33, 43, 0.8);
+  --textarea-bg: rgba(40, 44, 52, 0.8);
   
-  static createOptimizedAnimation(element, keyframes, options) {
-    this.enableAcceleration(element);
-    const animation = element.animate(keyframes, options);
-    
-    animation.addEventListener('finish', () => {
-      this.cleanupAcceleration(element);
-    });
-    
-    return animation;
-  }
+  /* Functional Colors */
+  --accent-blue: rgba(10, 132, 255, 1);
+  --accent-red: rgba(255, 69, 58, 1);
+  --accent-green: rgba(48, 209, 88, 1);
+  --accent-orange: rgba(255, 159, 10, 1);
   
-  static initializeParticleSystem(container) {
-    container.style.transform = 'translateZ(0)';
-    container.style.willChange = 'transform';
-    container.style.backfaceVisibility = 'hidden';
-    container.style.perspective = '1000px';
-  }
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 50px rgba(0, 0, 0, 0.4);
+  
+  /* Borders & Spacing */
+  --border-light: 1px solid rgba(255, 255, 255, 0.1);
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  
+  /* Animation Timing */
+  --anim-fast: 0.3s;
+  --anim-medium: 0.8s;
+  --anim-slow: 1s;
 }
-
-// Performance monitoring
-const LumaCraftPerformance = {
-  frameRate: 0,
-  lastTime: performance.now(),
-  
-  monitor() {
-    const now = performance.now();
-    this.frameRate = 1000 / (now - this.lastTime);
-    this.lastTime = now;
-    
-    // Adjust animation quality based on performance
-    if (this.frameRate < 30) {
-      document.body.classList.add('lumacraft-reduced-animations');
-    } else {
-      document.body.classList.remove('lumacraft-reduced-animations');
-    }
-    
-    requestAnimationFrame(() => this.monitor());
-  }
-};
 ```
 
 -----
 
 ## Summary
 
-This LumaCraft™ Website Design Language Roadmap represents a **premium, organic, and highly interactive** design methodology that combines sophisticated glass-morphism technology with dynamic, living interface elements. The system emphasizes **smooth luxury interactions** with **memorable brand differentiation** through the distinctive LumaCraft™ Lime/Hot Pink dual-tone palette and advanced morphing animation technology.
+This updated LumaCraft™ Website Design Language Roadmap represents the **actual implementation patterns** discovered across four live LumaCraft™ properties, providing a comprehensive foundation for consistent, premium user experiences.
 
-**Key LumaCraft™ Differentiators**:
+**Key LumaCraft™ Implementation Patterns**:
 
-- **Hardware-Accelerated Performance**: GPU-optimized animations and transforms for silky-smooth user experiences
-- **Intelligent Memory Management**: Automatic cleanup systems for optimal performance across all device types
-- **3D Transform Architecture**: Advanced `translate3d()` and `translateZ(0)` implementation for enhanced rendering
-- **Morphing blob background system** with GPU acceleration
-- **Dual-tone LumaCraft™ accent color architecture** (Lime + Hot Pink)
-- **Premium cubic-bezier timing function implementation**
-- **Staggered animation orchestration methodology** with hardware acceleration
-- **Glass-morphism with enhanced backdrop effect technology**
-- **Integrated particle system architecture** optimized for GPU rendering
-- **Advanced hover state micro-interaction protocols** with 3D transforms
-- **Performance-Adaptive Animation System**: Dynamic quality adjustment based on device capabilities
+- **Consistent Brand Color Usage**: LumaCraft™ Lime and Hot Pink across all properties
+- **Advanced Glass-Morphism**: Sophisticated backdrop filters with saturation enhancement
+- **Hardware-Accelerated Performance**: GPU-optimized animations with comprehensive cleanup
+- **Morphing Background Technology**: Complex blob animations with organic shape transformation
+- **Progressive Enhancement**: Graceful degradation for reduced motion preferences
+- **Responsive Scaling**: Adaptive design patterns across all device types
+- **Micro-Interaction Excellence**: Detailed hover states and feedback systems
 
-**Hardware Acceleration Benefits**:
+**Technical Excellence Standards**:
 
-- **60 FPS Performance**: Consistent frame rates across all supported devices
-- **Battery Optimization**: Efficient GPU utilization for mobile device longevity
-- **Smooth Interactions**: Lag-free user interface responses and transitions
-- **Scalable Performance**: Adaptive quality based on device capabilities
-- **Memory Efficiency**: Intelligent cleanup protocols for long-session stability
+- **60 FPS Performance**: Consistent frame rates through hardware acceleration
+- **Memory Efficiency**: Intelligent cleanup protocols and performance monitoring
+- **Accessibility Compliance**: Comprehensive motion reduction and focus management
+- **Cross-Browser Compatibility**: Webkit prefixes and graceful degradation
+- **Scalable Architecture**: CSS custom properties for maintainable theming
 
-This roadmap serves as a comprehensive reference for developers and designers looking to implement consistent, high-quality user experiences that align with modern design standards while maintaining the unique LumaCraft™ aesthetic identity and ensuring optimal performance through advanced hardware acceleration techniques.
+This roadmap serves as the definitive reference for implementing the LumaCraft™ design system, ensuring consistency across all digital properties while maintaining optimal performance and accessibility standards.
 
 -----
 
