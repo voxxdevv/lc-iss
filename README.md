@@ -1,41 +1,308 @@
-<h3></h3>
-<h3></h3>
-<kbd>
-<h3 align="left" width="100%">Latest Project</h3>
+# Design Language Roadmap
 
-<p align="left" width="100%">
+## Foundation Elements
 
-<a href="https://nft.itis.top/lm"><img src="https://img.shields.io/badge/LumaMind™-2d3748?&style=for-the-badge&labelColor=white&logo=data:image/png;base64,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&logoColor=white" /></a>
-</p>
+### Color System
+**Primary Palette**
+- **Background**: `#1a1a1a` (deep charcoal) to `#131313` (ultra-dark) 
+- **Text Primary**: `#f9f9f9` (near white) to `#e0e0e0` (light gray)
+- **Text Secondary**: `#c0c0c0` (medium gray) with 80% opacity
+- **Glass Background**: `rgba(30, 33, 43, 0.6)` with enhanced backdrop filters
 
-<p align="left" width="100%">View the full list of projects <a href="https://voxxdevv.is-a.dev">here</a>.</p>
-<h2></h2>
+**Accent Colors (Expanded)**
+- **Blue**: `#0a84ff` (system blue) with 15% opacity variants
+- **Green**: `#30d158` (success green)
+- **Orange**: `#ff9f0a` (warning orange)
+- **Red**: `#ff453a` (destructive red)
+- **Lime**: `#32CD32` (electric lime) - **New primary brand color**
+- **Hot Pink**: `#FF69B4` (vibrant pink) - **New secondary brand color**
 
-<p align="left" width="100%">
-<h3 align="left" width="100%">Currently Learning</h3>
-<p align="left" width="100%">
-    <a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/Basic Machine Learning With TensorFlow-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=tensorflow&logoColor=white" /></a>    <a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/JS-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=javascript&logoColor=white" /></a>    <a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/JSON-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=json&logoColor=white" /></a>    
-<a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/HTML5-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=html5&logoColor=white" /></a>   
- <a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/CSS3-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=css&logoColor=white" /></a>    
-<a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/PHP-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=php&logoColor=white" /></a>   
- <a href="https://voxxdevv.is-a.dev/"><img src="https://img.shields.io/badge/Block–Based Programming With iOS Shortcuts-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=data:image/png;base64,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&logoColor=white" /></a>
+**Glow Effects**
+- **Lime Glow**: `rgba(50, 205, 50, 0.4)`
+- **Pink Glow**: `rgba(255, 105, 180, 0.4)`
 
-</p>
+### Typography (Enhanced)
+**Primary Font**: Montserrat (Google Fonts)
+- **Weights**: 100-900 available
+- **Hierarchy**: 
+  - Hero Headers: 3rem, weight 900
+  - Section Headers: 2.5rem, weight 700
+  - Card Headers: 1.5rem, weight 600
+  - Body: 1-1.2rem, weight 400
+  - Labels: 0.75rem, weight 700 (uppercase)
+- **Text Shadow**: `0 5px 20px rgba(0, 0, 0, 0.15)` for enhanced depth
 
-<h2></h2>
+### Spacing System
+**CSS Custom Properties Approach**:
+```css
+:root {
+  --space-1: 0.5rem;    /* 8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 2.5rem;    /* 40px */
+}
+```
 
-<p align="left" width="100%">
-<h3 align="left" width="100%">Platforms</h3>
-<a href="https://voxxdevv.is-a.dev/voxxdevv.html"><img src="https://img.shields.io/badge/GitHub-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=github&logoColor=white" /></a>
-<a href="https://voxxdevv.is-a.dev/voxxdevv.html"><img src="https://img.shields.io/badge/RoutineHub-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAADZElEQVRYCe3VyW+McRzH8RalUaSWWqphbLH1RITEgTScNLjgQELaijjhPxARF1EOIrE03EiceigSW8WhElyalNjaoq2iat9pvd/NPNVOpzPP9NQm801emWfmeX7P85nf9mR2dnZmDJYaNliCmCMdpr/RSPfMkOiZEf2lTPJ7DucXYjHykYU2PEYdPsI94y/+oANJK9Uwo7njRpRgGcahZ/3mi4Eu4SoM2I7P+ICEoTJT2PQi3OwQNuMn7qMGT2GIPCzBakxFLc6gEc0wTAt+IG6FDTOH1hVYhdu4CMMED3FYrOFw+HajFAY4ikbU4wue4xv6VJgwubQ6hw04jyo04R3e4C1i3ykOv2EO4zvKYYggUEP0dz7+V5h9ZjuXG+RylP/WnnAuGCY2CD91TdqTfO7HROxDBLOREz3O5rNXJQszjavL8BqV8B877s6RViSrU1xwBVOwBxEYaEz0uFegZGFW0mgRrsNyjmTBIAlXBuct58hZ/IKTei9mwUBjo8fdgZKFWUEDy5UxEu9hiE8IW3e40PliuwlwyOIGig0zgwtdujMxN8oHO0fcvNzEXNYehy0numGca8fgUBvIZ8yHQ2ZPZceGKebHC3AVzIOTzYf7rwyQCQPFm7T8HLds53AZ4i6OwKFZE/10XvqcPC/oWa6Ym9gEx9nzo+D+EZTHhgobyHv47/1Tk/ASZXBXfhb97AocG6aBkztxGlvhbmnvue27URnEuWM7V1SYcp5E0IagV31luDUYrLtih8kT9TDQDdidPrwQ9lQuDGS4sOU7LII62NZQ3tfNsFfFC+MFQSCHzCqCQ1MAu9R9o7+2nOouX6wlcEjvwTZOaHvVRdGrEt3QQLtwC/kohkGmw95y30hWpVxgu2rYI80wWCv6DHOiMFyf8QQOmYHWYS3crMbDbX4y7LHY8r47cACvUAn/yAt8hTt6n0oWxgZBoGqOt8FwvpkN5TD0nD/ebwHKcQLOs+Nwj3kIV5SLxIncp8K8tYNGEQ4OYgtcZe4ZNTCsXW5PLUURClCLCjSiCQZqgW3jViphvIE9sR4lWI6evcLXrlAu2ypcg5O1HcEuHrdHON9VqYYJ2rljOhyFcHJnwQc/wgO4UjrgwwMcJq6Bhkl81wGeDTOBB3jr1Julw/TXZ+meGRI98w+LN+T7Wc4MDwAAAABJRU5ErkJggg==" /></a>
-<a href="https://voxxdevv.is-a.dev/voxxdevv.html"><img src="https://img.shields.io/badge/Discord-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=discord&logoColor=white" /></a>
-<a href="https://voxxdevv.is-a.dev/voxxdevv.html"><img src="https://img.shields.io/badge/TikTok-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=tiktok&logoColor=white" /></a>
-<a href="https://voxxdevv.is-a.dev/voxxdevv.html"><img src="https://img.shields.io/badge/X (Twitter)-ff69b4?&labelColor=32cd32&style=for-the-badge&logo=x&logoColor=white" /></a>
-</p>
-<h3></h3>
-</kbd>
-<h3></h3>
-<h3 align="center" width="100%">LumaCraft™
-</h3>
+## Visual Identity
 
-<h6 align="center" width="100%">The content in this repository may not be copied or used without permission. Legal information can be viewed <a href="https://voxxdevv.is-a.dev/legal.html">here</a>. Copyright © 2021-2025, LumaCraft. All rights reserved.</h6>
+### Morphing Blob System
+**Revolutionary Design Element**:
+- **Organic shapes** with complex border-radius animations
+- **Dual-blob layout**: Primary (hot pink) + Secondary (lime)
+- **Morphing animations**: 15-25 second cycles with cubic-bezier easing
+- **Floating motion**: Multi-axis translation with rotation and scale
+- **Ultra-blur**: 80px blur with 0.3 opacity for ethereal effects
+
+### Glass-morphism Design Language
+**Core Characteristics**:
+- **Backdrop blur**: 20-32px blur with enhanced saturation (2.5x-5x)
+- **Transparency**: 60-80% opacity backgrounds with gradient overlays
+- **Border treatment**: 1px solid white at 10% opacity
+- **Shadow system**: Enhanced depth with colored glows
+- **Gradient overlays**: Subtle lime/pink gradients at 3-5% opacity
+
+### Border Radius System
+- **Small**: 20px (badges, inputs)
+- **Medium**: 30px (cards, major elements)
+- **Large**: 30px+ (hero sections)
+- **Circular**: 50% (buttons, avatars)
+
+### Shadow Elevation
+- **Level 1**: `0 2px 8px rgba(0,0,0,0.2)`
+- **Level 2**: `0 8px 30px rgba(0,0,0,0.3)`
+- **Level 3**: `0 16px 50px rgba(0,0,0,0.4)`
+- **Enhanced Glows**: Colored shadows using accent colors
+
+## Advanced Animation Framework
+
+### Sophisticated Timing Functions
+- **Ultra-smooth**: `cubic-bezier(0.175, 0.885, 0.32, 1.275)` for premium feel
+- **Standard ease**: 1s transition duration for luxury pacing
+- **Fast micro**: 0.3s for immediate feedback
+- **Slow morphing**: 15-25s for ambient animations
+
+### Advanced Animation Patterns
+**Signature Entry Animations**:
+- **Fade up with delay**: Staggered 0.1s increments using `calc(var(--index) * 0.1s)`
+- **Scale and fade**: Combined opacity and transform animations
+- **Morphing blob background**: Continuous organic shape transformation
+
+**Interactive Hover States**:
+- **Lift and scale**: `translateY(-10px) scale(1.02)` with enhanced shadows
+- **Color-coded glows**: Lime/pink shadow enhancement on hover
+- **Underline animations**: Width-expanding underlines with rounded caps
+- **Margin compensation**: Dynamic margin adjustment for growing elements
+
+**Particle System**:
+- **Star-shaped particles**: Custom clip-path polygon shapes
+- **Dual-color particles**: Lime and pink variants with matching glows
+- **Float animation**: 15s infinite linear with opacity transitions
+- **Random positioning**: CSS custom property integration
+
+### Premium Micro-interactions
+**Header Scroll Behavior**:
+- **Dynamic backdrop filter**: Saturation increases from 2.5x to 5x
+- **Gradient border**: Animated lime/pink gradient that disappears on scroll
+- **Logo scaling**: Subtle scale reduction (0.9x) with smooth transitions
+- **Padding adjustments**: Responsive spacing changes
+
+## Component Architecture
+
+### Button System
+**Primary Actions**:
+- Background: Linear gradients with accent colors
+- Hover: Enhanced elevation + subtle scale
+- Active: Compressed scale (0.98)
+- Focus: 2px accent-colored outline
+
+**Secondary Actions**:
+- Glass background with border
+- Hover: Increased backdrop blur
+- Icon + text combinations supported
+
+### Dynamic Badge System
+**Project Type Indicators**:
+- **Website badges**: Lime green with border and hover glow
+- **iOS badges**: Hot pink with border and hover glow  
+- **Platform badges**: Static lime variants
+- **Misc badges**: Static pink variants
+- **Hover enhancements**: Background opacity increases and shadow glows
+
+### Advanced Card System
+**Service Cards**:
+- **Glass morphism base**: `rgba(255, 255, 255, 0.05)` with subtle gradients
+- **Enhanced hover states**: 10px lift with 2% scale and colored shadows
+- **Alternating accent colors**: Lime primary, pink alternating
+- **Underline animations**: Expanding width with hover-triggered margin compensation
+- **Staggered entry**: Index-based animation delays
+
+### Form Elements
+**Input Fields**:
+- Glass background (`rgba(40,44,52,0.8)`)
+- Focus state: Accent border + shadow glow
+- Smooth transform on interaction (`translateY(-1px)`)
+
+**Sophisticated Input System**:
+- **Dual-color theming**: Lime border with pink focus state
+- **Glow effects**: Reduced intensity glows for premium feel
+- **Smooth transitions**: 0.3s easing for all state changes
+- **Enhanced contrast**: Background darkening on focus
+
+### Navigation & Layout
+**Fixed Header System**:
+- **Backdrop saturation**: Dynamic blur enhancement
+- **Gradient backgrounds**: Horizontal lime/pink gradients
+- **Z-index management**: Ultra-high z-index (1000000) for overlay priority
+- **Smooth scroll behavior**: Global smooth scrolling
+
+**Container System**:
+- Max-width: 720px
+- Center alignment with auto margins
+- Responsive padding adjustments
+
+## Interactive States
+
+### Highlight System
+**Text Emphasis Effects**:
+- **Lime highlights**: Skewed background overlays with pink underlays
+- **Pink highlights**: Reverse color scheme with lime underlays
+- **Hover transformations**: Color inversion with enhanced skew and lift
+- **Dynamic heights**: 10px to 15px background expansion
+
+### Link Animation System
+**Footer Link Effects**:
+- **Center-expanding underlines**: Start from 50% position
+- **Staggered entry**: Index-based animation delays
+- **Dual hover states**: Color change + vertical lift (translateY(-2px))
+- **Margin compensation**: Smart spacing adjustment for underline expansion
+
+### Micro-interactions
+- **Copy actions**: Success pulse animation
+- **Button clicks**: Scale compression feedback
+- **Hover previews**: Progressive enhancement
+- **Focus management**: Clear visual hierarchy
+
+### Advanced Feedback Systems
+**Success States**:
+- Green accent (`#30d158`)
+- Pulse animation
+- Icon transformation
+
+**Error States**:
+- Red accent (`#ff453a`)
+- Shake animation
+- Background tinting (10% opacity)
+
+**Warning States**:
+- Orange accent (`#ff9f0a`)
+- Pulse animation
+- Background tinting
+
+**Loading States**:
+- **Organic morphing**: Background blob animations during load
+- **Particle emergence**: Dynamic particle generation
+- **Gradient shifts**: Background color transitions
+
+## Responsive Strategy
+
+### Breakpoint System
+- **Mobile**: < 768px (90% font scaling, reduced blob sizes)
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+### Adaptive Elements
+- Font size scaling via `html { font-size }` approach
+- Flexible container widths
+- Touch-friendly sizing for interactive elements
+- Grid system adaptation (auto-fill minmax)
+
+## Performance & Technical Implementation
+
+### Advanced CSS Architecture
+**CSS Custom Properties Integration**:
+- **Dynamic index variables**: `--card-index`, `--link-index` for staggered animations
+- **Color theming**: Centralized accent color management
+- **Animation coordination**: Synchronized timing across components
+
+### GPU Optimization
+**Hardware Acceleration**:
+- `will-change` properties for all animated elements
+- Transform-based animations prioritized over layout changes
+- Blob animations optimized for continuous rendering
+- Backdrop-filter with fallback strategies
+
+### Accessibility Considerations
+- Focus-visible outlines with sufficient contrast
+- Smooth scroll behavior
+- Text size adjustment prevention
+- High DPI display optimizations
+- **Motion Preferences**: `@media (prefers-reduced-motion: no-preference)` gating
+
+### Browser Support
+- Modern evergreen browsers
+- Webkit-specific prefixes for backdrop-filter
+- Graceful degradation for unsupported features
+
+## Brand Identity Integration
+
+### Signature Visual Language
+**Dual-tone Branding**:
+- **Primary**: Electric Lime (#32CD32) - Energy, growth, innovation
+- **Secondary**: Hot Pink (#FF69B4) - Creativity, boldness, differentiation
+- **Background**: Ultra-dark (#131313) - Premium, sophisticated, focused
+
+### Morphing Organic Aesthetics
+**Living Interface Elements**:
+- Continuous shape transformation suggests growth and adaptability
+- Particle systems create sense of energy and movement
+- Glass-morphism provides premium, modern aesthetic
+- Dual-color scheme creates memorable brand differentiation
+
+## Implementation Guidelines
+
+### CSS Architecture Pattern
+```css
+/* Core variables */
+:root {
+  --lime: #32CD32;
+  --hot-pink: #FF69B4;
+  --dark: #131313;
+  --light: #f9f9f9;
+  --lime-glow: rgba(50, 205, 50, 0.4);
+  --pink-glow: rgba(255, 105, 180, 0.4);
+}
+
+/* Premium timing function */
+.premium-transition {
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Staggered animation pattern */
+.staggered-item {
+  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: calc(var(--item-index, 0) * 0.1s + 0.2s);
+}
+```
+
+### Animation Keyframes
+```css
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes morphBlob1 {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  25% { border-radius: 50% 50% 40% 60% / 60% 40% 50% 40%; }
+  50% { border-radius: 30% 70% 70% 30% / 50% 60% 30% 60%; }
+  75% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+```
