@@ -1,7 +1,7 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Document Version**: 1.2.0  
-**Last Updated**: August 24, 2025  
+**Document Version**: 2.0.0  
+**Last Updated**: August 24, 2025
 
 -----
 
@@ -18,8 +18,8 @@ This website design language roadmap consolidates the actual implementation patt
 **Primary Brand Palette** (Consistent Across All Sites)
 
 - **Background Foundation**: `#1a1a1a` (primary dark), `#131313` (ultra-dark base), `#121419` (specialized backgrounds)
-- **Text Hierarchy**: `#f9f9f9` / `rgba(240, 240, 245, 1)` (primary content) to `#e0e0e0` / `rgba(200, 200, 210, 0.8)` (secondary content)
-- **Muted Content**: `#c0c0c0` (tertiary elements) with opacity modulation
+- **Glass-Morphism Backgrounds**: `rgba(18, 20, 25, 1)` (primary), `rgba(30, 33, 43, 0.6)` (glass base), `rgba(30, 33, 43, 0.8)` (hover states)
+- **Text Hierarchy**: `rgba(240, 240, 245, 1)` (primary content), `rgba(200, 200, 210, 0.8)` (secondary content), `#e0e0e0` to `#c0c0c0` (tertiary elements)
 
 **LumaCraft™ Signature Brand Colors**
 
@@ -29,28 +29,29 @@ This website design language roadmap consolidates the actual implementation patt
 
 **Extended Functional Color Portfolio**
 
-- **System Blue**: `rgba(10, 132, 255, 1)` with 15% opacity derivatives
-- **Accent Red**: `rgba(255, 69, 58, 1)` for specialized applications
-- **Success Green**: `#30d158` / `rgba(48, 209, 88, 1)` for positive states
+- **System Blue**: `rgba(10, 132, 255, 1)` with `rgba(10, 132, 255, 0.15)` opacity derivatives
+- **Accent Red**: `rgba(255, 69, 58, 1)` with `rgba(255, 69, 58, 0.15)` light variant for specialized applications
+- **Success Green**: `rgba(48, 209, 88, 1)` for positive states and AI detection
 - **Warning Orange**: `rgba(255, 159, 10, 1)` for cautionary feedback
-- **Error States**: `#ff6b6b` for critical alerts
+- **Error States**: `#ff6b6b` for critical alerts with `rgba(255, 107, 107, 0.1)` background
 
 **Glass-Morphism Foundation Colors**
 
-- **Primary Glass Background**: `rgba(30, 33, 43, 0.6)` with hover state `rgba(30, 33, 43, 0.8)`
-- **Input Background**: `rgba(40, 44, 52, 0.8)` for form elements
+- **Primary Glass Background**: `rgba(40, 44, 52, 0.8)` for form elements and inputs
 - **Container Variants**: `#252525`, `#232323`, `#2a2a2a` for different component types
+- **Hover Enhancement**: `rgba(40, 44, 52, 0.95)` for focused states
 
 ### Typography Architecture
 
-**Typeface**: Montserrat (Google Fonts Integration) - Universal across all properties
+**Typeface**: Montserrat (Google Fonts Integration) - Universal across all properties  
+**Secondary Typeface**: Merriweather (serif) - Used for paragraphs and link elements in portfolio sites
 
 **Font Weight System**:
 
 - **Ultra Bold Headers**: weight 900 for maximum impact displays
 - **Bold Headers**: weight 700 for section titles and important headers
 - **Semi-Bold**: weight 600 for component headers and buttons
-- **Medium**: weight 500 for emphasized content
+- **Medium**: weight 500 for emphasized content and standard headers
 - **Regular**: weight 400 for standard body text
 - **Light Variants**: weights 300-100 available for specialized use
 
@@ -61,32 +62,32 @@ This website design language roadmap consolidates the actual implementation patt
 .hero h1 { font-size: 3rem; font-weight: 900; }
 
 /* Section Headers */
-.section-title { font-size: 2.5rem; font-weight: 700; }
+.section-title, h1 { font-size: 2.5rem; font-weight: 700; }
 
 /* Primary Headers */
-h1 { font-size: 2.5rem; font-weight: 700; }
+.logo { font-size: 2.5rem; font-weight: 700; }
 
 /* Component Headers */
-h3, .service-card h3 { font-size: 1.5rem; font-weight: 600; }
+h3, .service-card h3, .input-title { font-size: 1.5rem; font-weight: 600; }
 
 /* Standard Headers */
 h2 { font-size: 1.1rem; font-weight: 500; }
 
 /* Body Text */
-p, body { font-size: 1rem; line-height: 1.5-1.6; }
+p, body, .description { font-size: 1rem; line-height: 1.5-1.6; }
 
 /* Interface Labels */
 label { font-size: 0.9rem; font-weight: 400; }
 
 /* Small Text */
-.footer-text { font-size: 1rem; }
+.footer-text, .color-name { font-size: 0.85-1rem; }
 ```
 
 **Enhanced Text Effects**:
 
 - **Text Shadow**: `0 5px 20px rgba(0, 0, 0, 0.15)` for depth
-- **Gradient Text**: Linear gradients for brand elements
-- **Drop Shadow**: `drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))` for logos
+- **Gradient Text**: Linear gradients for brand elements, particularly red-orange and blue-purple combinations
+- **Drop Shadow**: `drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))` for logos and important elements
 
 ### Advanced Spacing System
 
@@ -116,6 +117,7 @@ label { font-size: 0.9rem; font-weight: 400; }
   max-width: 1200px; max-height: 1200px;
   min-width: 600px; min-height: 600px;
   background: var(--hot-pink);
+  top: -15%; right: -25%;
   filter: blur(80px);
   opacity: 0.3;
   animation: morphBlob1 15s ease-in-out infinite alternate, 
@@ -127,6 +129,7 @@ label { font-size: 0.9rem; font-weight: 400; }
   max-width: 1100px; max-height: 1100px;
   min-width: 550px; min-height: 550px;
   background: var(--lime);
+  bottom: -25%; left: 10%;
   filter: blur(80px);
   opacity: 0.3;
   animation: morphBlob2 18s ease-in-out infinite alternate, 
@@ -134,12 +137,30 @@ label { font-size: 0.9rem; font-weight: 400; }
 }
 ```
 
-**Morphing Animation Technology**:
+**Alternative Blob Implementation** (Used in tool-focused applications):
 
-- **Complex Border-Radius Transitions**: From `40% 60% 70% 30% / 40% 50% 60% 50%` through multiple organic variations
-- **Coordinated Transform System**: Translation, rotation, and scale changes
-- **Dual-Blob Configuration**: LumaCraft™ Hot Pink primary, Lime secondary
-- **Ultra-Blur Effects**: 80px blur radius for ethereal backgrounds
+```css
+/* Smaller, subtle blobs for focused applications */
+.blob-1 {
+  width: 600px; height: 600px;
+  background: color-mix(in srgb, var(--accent-blue) 10%, transparent);
+  top: -300px; right: -200px;
+  animation: blobFloat1 20s infinite ease-in-out alternate;
+}
+```
+
+**Complex Background Patterns** (PaletteAI™ implementation):
+
+```css
+body {
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 15px),
+    linear-gradient(145deg, var(--bg-primary) 0%, #121419 30%, #1e212b 80%, #121419 100%);
+  background-size: 400% 400%;
+  animation: bgMove 30s ease-in-out infinite;
+}
+```
 
 ### Glass-Morphism Framework
 
@@ -154,11 +175,16 @@ label { font-size: 0.9rem; font-weight: 400; }
   border-radius: 30px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
+.container:hover {
+  background: rgba(30, 33, 43, 0.8);
+  backdrop-filter: saturate(180%) blur(32px);
+}
 ```
 
-**Backdrop Filter Specifications**:
+**Enhanced Backdrop Filter Specifications**:
 
-- **Saturation Enhancement**: 180-320% saturation multipliers
+- **Saturation Enhancement**: 180-320% saturation multipliers for premium depth
 - **Blur Technology**: 20-32px blur with enhanced clarity
 - **Border Treatment**: 1px solid white at 10% opacity
 - **Shadow Integration**: Multi-level depth with colored glow effects
@@ -172,6 +198,7 @@ label { font-size: 0.9rem; font-weight: 400; }
 - **Large Components**: 30px+ (major containers, hero sections)
 - **Form Elements**: 20-30px (inputs, buttons)
 - **Circular Elements**: 50% (avatar buttons, icon containers)
+- **Premium Cards**: 2.5-3rem (48-50px) for high-impact components
 
 -----
 
@@ -199,8 +226,8 @@ label { font-size: 0.9rem; font-weight: 400; }
 **Signature Timing Functions**:
 
 - **Premium Smoothing**: `cubic-bezier(0.175, 0.885, 0.32, 1.275)` for luxury feel
-- **Bounce Effect**: `cubic-bezier(0.22, 1, 0.36, 1)` for card animations
-- **Standard Easing**: `cubic-bezier(0.34, 1.56, 0.64, 1)` for hover effects
+- **Enhanced Bounce**: `cubic-bezier(0.22, 1, 0.36, 1)` for card animations
+- **Smooth Elevation**: `cubic-bezier(0.34, 1.56, 0.64, 1)` for hover effects
 - **Quick Response**: `cubic-bezier(0.4, 0, 0.2, 1)` for immediate feedback
 
 ### Enhanced Animation Patterns
@@ -229,26 +256,62 @@ label { font-size: 0.9rem; font-weight: 400; }
     opacity: 1;
   }
 }
+
+/* Card appearance with scale */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 ```
 
 **Interactive Response Behaviors**:
 
-- **Elevation Response**: `translateY(-10px) scale(1.02)` for cards
-- **Enhanced Elevation**: `translateY(-4px) scale(1.03)` for buttons
-- **Micro-Feedback**: `translateY(-2px)` for links and small elements
+- **Premium Elevation**: `translateY(-10px) scale(1.02)` for service cards
+- **Enhanced Button Response**: `translateY(-4px) scale(1.03)` for primary buttons
+- **Subtle Micro-Feedback**: `translateY(-2px)` for links and small elements
+- **Message Hover**: `translateX(3px)` for chat messages
 
-### Background Animation Systems
+### Loading and State Animations
 
-**Complex Background Patterns**:
+**Sophisticated Loading States**:
 
 ```css
-body {
-  background:
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 20px),
-    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 15px),
-    linear-gradient(145deg, var(--bg-primary) 0%, #121419 30%, #1e212b 80%, #121419 100%);
-  background-size: 400% 400%;
-  animation: bgMove 30s ease-in-out infinite;
+.loading-spinner {
+  border: 3px solid var(--bg-glass);
+  border-radius: 50%;
+  border-top-color: var(--accent-blue);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+```
+
+**Success and Error States**:
+
+```css
+.copy-btn.copied {
+  color: #4ade80;
+  border-color: #4ade80;
+  animation: successPulse 0.6s ease-out;
+}
+
+.error {
+  animation: shake 0.5s ease-in-out, fadeInDown 0.5s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }
 ```
 
@@ -267,6 +330,7 @@ body {
   border-radius: 30px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(10, 132, 255, 0.4);
+  font-weight: 600;
 }
 
 .analyze-btn:hover {
@@ -275,11 +339,28 @@ body {
 }
 ```
 
-**Secondary Action Elements**:
+**Specialized Button Types**:
 
-- **Circular Icon Buttons**: 50px circular buttons for specific actions
-- **Warning/Danger States**: Specialized color schemes with hover elevation
-- **Glass-Style Buttons**: Backdrop filter implementation with border definition
+```css
+/* Danger buttons (circular) */
+.btn-danger {
+  background: #744444;
+  border: 2px solid #8b5555;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass-style copy buttons */
+.copy-btn {
+  background: none;
+  backdrop-filter: saturate(180%) blur(28px);
+  border: var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+```
 
 ### Dynamic Badge Architecture
 
@@ -294,6 +375,7 @@ body {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 6px 12px;
 }
 
 .badge-ios {
@@ -316,12 +398,32 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: calc(var(--card-index, 0) * 0.1s + 0.2s);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .service-card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: rgba(50, 205, 50, 0.3);
   box-shadow: 0 15px 35px rgba(50, 205, 50, 0.15);
+}
+```
+
+**Premium Glass Cards**:
+
+```css
+.card {
+  border-radius: 2.5rem;
+  backdrop-filter: saturate(180%) blur(28px);
+  border: var(--border-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: cardDrop 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card:hover {
+  transform: translateY(0) scale(1.02);
+  box-shadow: var(--shadow-lg), 0 0 20px var(--accent-red-light);
 }
 ```
 
@@ -336,12 +438,36 @@ input[type="text"], textarea {
   border-radius: 20px;
   transition: all 0.3s ease;
   backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 input:focus, textarea:focus {
   border-color: var(--accent-blue);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(40, 44, 52, 0.95);
+}
+```
+
+**Icon Integration**:
+
+```css
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+input[type="text"] {
+  padding: 0.75rem 0.75rem 0.75rem 3rem; /* Left padding for icon */
 }
 ```
 
@@ -377,6 +503,11 @@ input:focus, textarea:focus {
   background: var(--pink-glow);
   transform: skewX(-25deg) translateY(-2px);
 }
+
+.alt-highlight {
+  color: var(--hot-pink);
+  /* Inverse skew direction */
+}
 ```
 
 ### Advanced Link Animation Architecture
@@ -400,40 +531,36 @@ input:focus, textarea:focus {
 .footer-links a:hover::after {
   width: 100%;
 }
-```
 
-### State Feedback Systems
-
-**Success State Indicators**:
-
-```css
-.copy-btn.copied {
-  color: #4ade80;
-  border-color: #4ade80;
-  animation: successPulse 0.6s ease-out;
-}
-
-@keyframes successPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+/* Alternative left-aligned underlines */
+.alt-a::after {
+  left: 0;
+  transform: none;
 }
 ```
 
-**Error State Management**:
+### Header Scroll Behavior
+
+**Dynamic Header Technology**:
 
 ```css
-.error {
-  color: #ff6b6b;
-  background: rgba(255, 107, 107, 0.1);
-  border: 1px solid rgba(255, 107, 107, 0.2);
-  animation: shake 0.5s ease-in-out, fadeInDown 0.5s ease-out;
+header {
+  position: fixed;
+  transition: padding 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+              backdrop-filter 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+              background 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  background-color: var(--dark);
+  padding: 3.2rem;
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+header.scrolled {
+  padding: 2.8rem;
+  backdrop-filter: saturate(2.5) blur(30px);
+  background-color: rgba(0,0,0,0.3);
+}
+
+header.scrolled .logo {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 ```
 
@@ -449,9 +576,17 @@ input:focus, textarea:focus {
   html { font-size: 90%; }
   .blob-1, .blob-2 { width: 350px; height: 350px; }
   .portfolio-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2rem; }
+  .container { padding: 1.5rem 1rem; }
 }
 
-/* Enhanced Coverage for Large Screens */
+/* Medium screens enhancement */
+@media screen and (max-width: 480px) {
+  .logo-icon { width: 40px; height: 40px; }
+  .description { font-size: 0.9rem; }
+}
+
+/* Large screen blob coverage */
 @media screen and (min-width: 1200px) {
   .blob-1 { width: 90vw; height: 90vw; }
   .blob-2 { width: 85vw; height: 85vw; }
@@ -559,15 +694,22 @@ textarea:focus-visible {
   --pink-glow: rgba(255, 105, 180, 0.4);
   
   /* Glass System */
+  --bg-primary: rgba(18, 20, 25, 1);
   --bg-glass: rgba(30, 33, 43, 0.6);
   --bg-glass-hover: rgba(30, 33, 43, 0.8);
   --textarea-bg: rgba(40, 44, 52, 0.8);
   
   /* Functional Colors */
   --accent-blue: rgba(10, 132, 255, 1);
+  --accent-blue-light: rgba(10, 132, 255, 0.15);
   --accent-red: rgba(255, 69, 58, 1);
+  --accent-red-light: rgba(255, 69, 58, 0.15);
   --accent-green: rgba(48, 209, 88, 1);
   --accent-orange: rgba(255, 159, 10, 1);
+  
+  /* Text Colors */
+  --text-primary: rgba(240, 240, 245, 1);
+  --text-secondary: rgba(200, 200, 210, 0.8);
   
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -583,9 +725,33 @@ textarea:focus-visible {
   --space-5: 2.5rem;
   
   /* Animation Timing */
-  --anim-fast: 0.3s;
-  --anim-medium: 0.8s;
+  --anim-fast: 0.2-0.3s;
+  --anim-medium: 0.4-0.8s;
   --anim-slow: 1s;
+}
+```
+
+### Universal Base Styles
+
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Text shadow for depth */
+* {
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 ```
 
@@ -597,21 +763,28 @@ This updated LumaCraft™ Website Design Language Roadmap represents the **actua
 
 **Key LumaCraft™ Implementation Patterns**:
 
-- **Consistent Brand Color Usage**: LumaCraft™ Lime and Hot Pink across all properties
-- **Advanced Glass-Morphism**: Sophisticated backdrop filters with saturation enhancement
-- **Hardware-Accelerated Performance**: GPU-optimized animations with comprehensive cleanup
-- **Morphing Background Technology**: Complex blob animations with organic shape transformation
-- **Progressive Enhancement**: Graceful degradation for reduced motion preferences
-- **Responsive Scaling**: Adaptive design patterns across all device types
-- **Micro-Interaction Excellence**: Detailed hover states and feedback systems
+- **Dual Typography System**: Montserrat for UI elements, Merriweather for content
+- **Advanced Glass-Morphism**: Sophisticated backdrop filters with saturation enhancement up to 320%
+- **Hardware-Accelerated Performance**: GPU-optimized animations with comprehensive cleanup protocols
+- **Complex Background Technology**: Repeating gradient patterns with animated positioning
+- **Responsive Blob System**: Adaptive sizing from mobile (350px) to ultra-wide (100vw)
+- **Multi-State Interactions**: Sophisticated hover, focus, and success state management
+- **Icon Integration**: Consistent 20px icons with absolute positioning in inputs
 
 **Technical Excellence Standards**:
 
-- **60 FPS Performance**: Consistent frame rates through hardware acceleration
-- **Memory Efficiency**: Intelligent cleanup protocols and performance monitoring
-- **Accessibility Compliance**: Comprehensive motion reduction and focus management
-- **Cross-Browser Compatibility**: Webkit prefixes and graceful degradation
-- **Scalable Architecture**: CSS custom properties for maintainable theming
+- **60 FPS Performance**: Consistent frame rates through hardware acceleration and `will-change` optimization
+- **Memory Efficiency**: Intelligent cleanup protocols and staggered animations
+- **Accessibility Compliance**: Comprehensive motion reduction and focus management with 2px outline standards
+- **Cross-Browser Compatibility**: Webkit prefixes and graceful degradation patterns
+- **Scalable Architecture**: CSS custom properties with consistent naming conventions
+
+**Application-Specific Patterns**:
+
+- **Portfolio Sites**: Large morphing blobs with lime/pink branding
+- **Tool Applications**: Subtle blue-tinted blobs with focused glass containers
+- **Chat Interfaces**: Message-specific animations with copy button micro-interactions
+- **Generator Tools**: Premium card animations with sophisticated backdrop filtering
 
 This roadmap serves as the definitive reference for implementing the LumaCraft™ design system, ensuring consistency across all digital properties while maintaining optimal performance and accessibility standards.
 
