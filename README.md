@@ -813,6 +813,6 @@ This roadmap serves as the definitive reference for implementing the LumaCraft�
 
 -----
 
-To report a problem, contact [@voxxdevv](https://nft.itis.top/a/voxxdevv.html).
+To report a problem, you may contact [@voxxdevv](https://nft.itis.top/a/voxxdevv.html).
 
 The content in this repository may not be copied or used without permission. Legal information can be viewed [here](https://nft.itis.top/a/legal.html). Copyright © 2021-2025, LumaCraft. All rights reserved.​​​​​​​​​​​​​​​​
