@@ -1,7 +1,7 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Version**: 1.3.2  
-**Last Updated**: August 24, 2025
+**Version**: 1.3.3  
+**Last Updated**: August 25, 2025
 
 -----
 
@@ -548,7 +548,7 @@ input[type="text"] {
   transform: translateX(-50%);
   background: var(--hot-pink);
   border-radius: 1px;
-  transition: width 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .footer-links a:hover::after {
