@@ -1,6 +1,6 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Version**: 1.3.4  
+**Version**: 1.3.5  
 **Last Updated**: August 25, 2025
 
 -----
@@ -43,8 +43,8 @@ This website design language roadmap consolidates the actual implementation patt
 
 ### Typography Architecture
 
-**Typeface**: Montserrat (Google Fonts Integration) - Universal across all properties  
-**Secondary Typeface**: Merriweather (serif) - Used for paragraphs and link elements in portfolio sites
+**Typeface**: Montserrat (Google Fonts Integration) - Universal across all pages for body text, links, and functional elements  
+**Secondary Typeface**: Unbounded - Used on portfolio pages for headings, hero sections, badges, and highlights to give personality and visual flair
 
 **Font Weight System**:
 
