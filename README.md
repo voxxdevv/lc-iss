@@ -1,6 +1,6 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Version**: 1.3.5  
+**Version**: 1.3.6  
 **Last Updated**: August 25, 2025
 
 -----
@@ -218,7 +218,7 @@ body {
 /* Staggered Entry Animation */
 .staggered-item {
   opacity: 0;
-  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: fadeInUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: calc(var(--card-index, 0) * 0.1s + 0.2s);
 }
 ```
@@ -562,7 +562,7 @@ input[type="text"] {
   transform: translateX(-50%);
   background: var(--hot-pink);
   border-radius: 1px;
-  transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  transition: width 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .footer-links a:hover::after {
