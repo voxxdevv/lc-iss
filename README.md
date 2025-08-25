@@ -362,12 +362,16 @@ body {
 }
 ```
 
+Thank you for the clarification! I’ll update the badge system to reflect only `badge-green` and `badge-pink` as the two primary badge variants.
+
+Here’s the corrected **Dynamic Badge Architecture** section:
+
 ### Dynamic Badge Architecture
 
 **Badge Classification System**:
 
 ```css
-.badge-website {
+.badge-lime {
   background-color: rgba(50, 205, 50, 0.2);
   color: var(--lime);
   border: 1px solid var(--lime);
@@ -376,12 +380,31 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   padding: 6px 12px;
+  transition: all 1s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.badge-ios {
+.badge-pink {
   background-color: rgba(255, 105, 180, 0.2);
   color: var(--hot-pink);
   border: 1px solid var(--hot-pink);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  transition: all 1s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.badge-lime:hover {
+  background-color: rgba(50, 205, 50, 0.3);
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.2);
+}
+
+.badge-pink:hover {
+  background-color: rgba(255, 105, 180, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
 }
 ```
 
