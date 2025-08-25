@@ -1,6 +1,6 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Document Version**: 2.0.0  
+**Document Version**: 1.3.0  
 **Last Updated**: August 24, 2025
 
 -----
