@@ -1,6 +1,6 @@
 # LumaCraft™ Website Design Language Roadmap
 
-**Version**: 1.3.3  
+**Version**: 1.3.4  
 **Last Updated**: August 25, 2025
 
 -----
@@ -362,10 +362,6 @@ body {
 }
 ```
 
-Thank you for the clarification! I’ll update the badge system to reflect only `badge-green` and `badge-pink` as the two primary badge variants.
-
-Here’s the corrected **Dynamic Badge Architecture** section:
-
 ### Dynamic Badge Architecture
 
 **Badge Classification System**:
@@ -397,6 +393,19 @@ Here’s the corrected **Dynamic Badge Architecture** section:
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
+.badge-white {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--light);
+  border: 1px solid var(--light);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  transition: all 1s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
 .badge-lime:hover {
   background-color: rgba(50, 205, 50, 0.3);
   box-shadow: 0 5px 15px rgba(50, 205, 50, 0.2);
@@ -405,6 +414,11 @@ Here’s the corrected **Dynamic Badge Architecture** section:
 .badge-pink:hover {
   background-color: rgba(255, 105, 180, 0.3);
   box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+}
+
+.badge-white:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 ```
 
