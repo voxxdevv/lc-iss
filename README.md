@@ -43,8 +43,8 @@ This website design language roadmap consolidates the actual implementation patt
 
 ### Typography Architecture
 
-**Typeface**: Montserrat (Google Fonts Integration) - Universal across all pages for body text, links, and functional elements  
-**Secondary Typeface**: Unbounded - Universal across all pages for headings, hero sections, badges, and highlights to give personality and visual flair
+**Typeface**: Montserrat (Google Fonts Integration) - Universal across all websites for body text, links, and functional elements  
+**Secondary Typeface**: Unbounded - Universal across all websites for headings, hero sections, badges, and highlights to give personality and visual flair
 
 **Font Weight System**:
 
