@@ -1,7 +1,7 @@
 # LumaCraft™ Website Design Language Roadmap
 
 ***Information may not be up to date.***  
-**Version**: 1.3.7  
+**Version**: 1.3.8  
 **Last Updated**: August 26, 2025
 
 -----
@@ -44,44 +44,77 @@ This website design language roadmap consolidates the actual implementation patt
 
 ### Typography Architecture
 
-**Typeface**: Montserrat (Google Fonts Integration) - Universal across all websites for body text, links, and functional elements  
-**Secondary Typeface**: Unbounded - Universal across all websites for headings, hero sections, badges, and highlights to give personality and visual flair
+**Primary Typeface**: Unbounded (Google Fonts Integration) - Universal across all websites for headings, hero sections, badges, and highlights to give personality and visual flair  
+**Secondary Typeface**: Montserrat - Universal across all websites for body text, links, and functional elements
 
-**Font Weight System**:
+**Updated Font Weight System**:
 
-- **Ultra Bold Headers**: weight 900 for maximum impact displays
-- **Bold Headers**: weight 700 for section titles and important headers
-- **Semi-Bold**: weight 600 for component headers and buttons
-- **Medium**: weight 500 for emphasized content and standard headers
-- **Regular**: weight 400 for standard body text
+- **Ultra Bold Headers**: weight 900 for maximum impact displays (Unbounded)
+- **Bold Headers**: weight 700 for section titles and important headers (Unbounded)
+- **Semi-Bold**: weight 600 for component headers and buttons (Unbounded)
+- **Medium**: weight 500 for emphasized content, standard headers, and **regular body text** (Montserrat - updated standard weight)
+- **Regular**: weight 400 for light body text and specialized use (Montserrat)
 - **Light Variants**: weights 300-100 available for specialized use
 
 **Typography Scale Implementation**:
 
 ```css
 /* Hero Display */
-.hero h1 { font-size: 3rem; font-weight: 900; }
+.hero h1 { 
+  font-family: 'Unbounded', sans-serif;
+  font-size: 3rem; 
+  font-weight: 900; 
+}
 
 /* Section Headers */
-.section-title, h1 { font-size: 2.5rem; font-weight: 700; }
+.section-title, h1 { 
+  font-family: 'Unbounded', sans-serif;
+  font-size: 2.5rem; 
+  font-weight: 700; 
+}
 
 /* Primary Headers */
-.logo { font-size: 2.5rem; font-weight: 700; }
+.logo { 
+  font-family: 'Unbounded', sans-serif;
+  font-size: 2.5rem; 
+  font-weight: 700; 
+}
 
 /* Component Headers */
-h3, .service-card h3, .input-title { font-size: 1.5rem; font-weight: 600; }
+h3, .service-card h3, .input-title { 
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.5rem; 
+  font-weight: 600; 
+}
 
 /* Standard Headers */
-h2 { font-size: 1.1rem; font-weight: 500; }
+h2 { 
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.1rem; 
+  font-weight: 500; 
+}
 
-/* Body Text */
-p, body, .description { font-size: 1rem; line-height: 1.5-1.6; }
+/* Body Text - Updated to weight 500 */
+p, body, .description { 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem; 
+  font-weight: 500; /* Updated from 400 */
+  line-height: 1.5-1.6; 
+}
 
 /* Interface Labels */
-label { font-size: 0.9rem; font-weight: 400; }
+label { 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem; 
+  font-weight: 500; /* Updated from 400 */
+}
 
 /* Small Text */
-.footer-text, .color-name { font-size: 0.85-1rem; }
+.footer-text, .color-name { 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85-1rem;
+  font-weight: 500; /* Updated from 400 */ 
+}
 ```
 
 **Enhanced Text Effects**:
@@ -331,6 +364,7 @@ body {
   border-radius: 30px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(10, 132, 255, 0.4);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -373,6 +407,7 @@ body {
   color: var(--lime);
   border: 1px solid var(--lime);
   border-radius: 15px;
+  font-family: 'Unbounded', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -386,6 +421,7 @@ body {
   color: var(--hot-pink);
   border: 1px solid var(--hot-pink);
   border-radius: 15px;
+  font-family: 'Unbounded', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -399,6 +435,7 @@ body {
   color: var(--light);
   border: 1px solid var(--light);
   border-radius: 15px;
+  font-family: 'Unbounded', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -474,6 +511,8 @@ input[type="text"], textarea {
   background: rgba(40, 44, 52, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; /* Updated from 400 */
   transition: all 0.3s ease;
   backdrop-filter: saturate(180%) blur(12px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -776,10 +815,16 @@ textarea:focus-visible {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Default to Montserrat */
+  font-weight: 500; /* Updated default weight */
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+}
+
+/* Headers use Unbounded */
+h1, h2, h3, h4, h5, h6, .logo, .badge, .highlight {
+  font-family: 'Unbounded', sans-serif;
 }
 
 /* Text shadow for depth */
@@ -799,9 +844,15 @@ html {
 
 This updated LumaCraft™ Website Design Language Roadmap represents the **actual implementation patterns** discovered across four live LumaCraft™ properties, providing a comprehensive foundation for consistent, premium user experiences.
 
+**Key Updates in Version 1.3.8**:
+
+- **Font Weight System Update**: Regular body text now uses weight 500 (instead of 400) for better blending with Unbounded headers
+- **Typography Hierarchy Refinement**: Clear delineation between Unbounded (headers/display) and Montserrat (body/UI) usage
+- **Enhanced Font Family Specifications**: Explicit font-family declarations in CSS examples for better implementation clarity
+
 **Key LumaCraft™ Implementation Patterns**:
 
-- **Dual Typography System**: Montserrat for UI elements, Merriweather for content
+- **Dual Typography System**: Unbounded for headers/display elements, Montserrat (weight 500) for UI and body content
 - **Advanced Glass-Morphism**: Sophisticated backdrop filters with saturation enhancement up to 320%
 - **Hardware-Accelerated Performance**: GPU-optimized animations with comprehensive cleanup protocols
 - **Complex Background Technology**: Repeating gradient patterns with animated positioning
@@ -830,4 +881,4 @@ This roadmap serves as the definitive reference for implementing the LumaCraft�
 
 To report a problem, you may contact [@voxxdevv](https://nft.itis.top/pages/voxxdevv.html).
 
-The content in this repository may not be copied or used without permission. Legal information can be viewed [here](https://nft.itis.top/pages/legal.html). Copyright © 2021-2025, LumaCraft. All rights reserved.​​​​​​​​​​​​​​​​
+The content in this repository may not be copied or used without permission. Legal information can be viewed [here](https://nft.itis.top/pages/legal.html). Copyright © 2021-2025, LumaCraft. All rights reserved.
